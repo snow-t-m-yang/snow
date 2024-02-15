@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type  Metadata from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
@@ -18,15 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} px-3 max-w-2xl m-auto`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggler />
           {children}
+          {/* <ModeToggler /> */}
         </ThemeProvider>
       </body>
     </html>
